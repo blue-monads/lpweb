@@ -1,9 +1,9 @@
 package enode
 
 import (
-	"github.com/temphia/lpweb/code/core/mesh"
-	"github.com/temphia/lpweb/code/proxy"
-	"github.com/temphia/lpweb/code/tunnel"
+	"github.com/blue-monads/lpweb/code/core/mesh"
+	"github.com/blue-monads/lpweb/code/proxy"
+	"github.com/blue-monads/lpweb/code/tunnel"
 )
 
 type EmbedLPWebNode struct {

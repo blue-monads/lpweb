@@ -2,9 +2,9 @@ package cli
 
 import (
 	"github.com/alecthomas/kong"
+	"github.com/blue-monads/lpweb/code/proxy"
+	"github.com/blue-monads/lpweb/code/tunnel"
 	"github.com/k0kubun/pp"
-	"github.com/temphia/lpweb/code/proxy"
-	"github.com/temphia/lpweb/code/tunnel"
 )
 
 type CLI struct {

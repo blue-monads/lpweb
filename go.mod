@@ -1,4 +1,4 @@
-module github.com/temphia/lpweb
+module github.com/blue-monads/lpweb
 
 go 1.21
 

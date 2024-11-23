@@ -3,10 +3,10 @@ package tunnel
 import (
 	"sync"
 
+	"github.com/blue-monads/lpweb/code/core/config"
+	"github.com/blue-monads/lpweb/code/core/mesh"
+	"github.com/blue-monads/lpweb/code/proxy/streamer"
 	"github.com/libp2p/go-libp2p/core/host"
-	"github.com/temphia/lpweb/code/core/config"
-	"github.com/temphia/lpweb/code/core/mesh"
-	"github.com/temphia/lpweb/code/proxy/streamer"
 )
 
 type HttpTunnel struct {

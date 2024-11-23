@@ -3,9 +3,9 @@ package tunnel
 import (
 	"io"
 
+	"github.com/blue-monads/lpweb/code/wire"
 	"github.com/k0kubun/pp"
 	"github.com/libp2p/go-libp2p/core/network"
-	"github.com/temphia/lpweb/code/wire"
 )
 
 type proxyReader struct {

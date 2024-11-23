@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/blue-monads/lpweb/code/core"
+	"github.com/blue-monads/lpweb/code/core/mesh"
 	"github.com/k0kubun/pp"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/multiformats/go-multiaddr"
-	"github.com/temphia/lpweb/code/core"
-	"github.com/temphia/lpweb/code/core/mesh"
 )
 
 func ResolveAndConnect(mesh *mesh.Mesh, target string) (*peer.AddrInfo, error) {

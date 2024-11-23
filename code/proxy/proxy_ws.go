@@ -7,10 +7,10 @@ import (
 	"net/http/httputil"
 	"net/url"
 
+	"github.com/blue-monads/lpweb/code/core/mesh"
+	"github.com/blue-monads/lpweb/code/wire"
 	"github.com/gorilla/websocket"
 	"github.com/k0kubun/pp"
-	"github.com/temphia/lpweb/code/core/mesh"
-	"github.com/temphia/lpweb/code/wire"
 )
 
 var upgrader = websocket.Upgrader{}

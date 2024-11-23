@@ -9,11 +9,11 @@ import (
 	"net/url"
 	"time"
 
+	"github.com/blue-monads/lpweb/code/core"
+	"github.com/blue-monads/lpweb/code/proxy"
+	"github.com/blue-monads/lpweb/code/tunnel"
 	"github.com/gorilla/websocket"
 	"github.com/k0kubun/pp"
-	"github.com/temphia/lpweb/code/core"
-	"github.com/temphia/lpweb/code/proxy"
-	"github.com/temphia/lpweb/code/tunnel"
 )
 
 type Esuit struct {

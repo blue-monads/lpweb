@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/blue-monads/lpweb/code/wire"
 	"github.com/gorilla/websocket"
 	"github.com/k0kubun/pp"
 	"github.com/libp2p/go-libp2p/core/network"
-	"github.com/temphia/lpweb/code/wire"
 )
 
 func (ht *HttpTunnel) streamHandleWS(stream network.Stream) {

@@ -3,10 +3,10 @@ package streamer
 import (
 	"context"
 
+	"github.com/blue-monads/lpweb/code/wire"
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
-	"github.com/temphia/lpweb/code/wire"
 )
 
 type Streamer struct {

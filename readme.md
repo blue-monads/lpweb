@@ -35,7 +35,7 @@ lpweb web-proxy --port=8080 # 8080 is a proxy port, use in browser/networking
 
 docker run -it golang:1.21
 
-apt update && apt install -y tmux && git clone https://github.com/temphia/lpweb && cd lpweb && git checkout mj-packet-splitter
+apt update && apt install -y tmux && git clone https://github.com/blue-monads/lpweb && cd lpweb && git checkout mj-packet-splitter
 
 tmux # Ctrl+b " -> to split screen
 

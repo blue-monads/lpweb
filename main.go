@@ -1,6 +1,6 @@
 package main
 
-import "github.com/temphia/lpweb/cli"
+import "github.com/blue-monads/lpweb/cli"
 
 func main() {
 
