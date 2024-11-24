@@ -13,6 +13,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/blue-monads/lpweb/code/core"
 	"github.com/ipfs/go-datastore"
 	"github.com/k0kubun/pp"
 
@@ -368,6 +369,15 @@ func (m *Mesh) GetPeerKey() peer.ID {
 
 func (m *Mesh) GetPossiblePeers() []peer.ID {
 	return m.Host.Peerstore().Peers()
+}
+
+func (m *Mesh) GetPubKeyAsDomainHash() string {
+	peerKey, err := m.GetPeerKey().MarshalBinary()
+	if err != nil {
+		panic(err)
+	}
+
+	return string(core.EncodeToSafeString(peerKey))
 }
 
 func getFreePort() (int, error) {
