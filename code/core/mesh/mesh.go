@@ -99,6 +99,10 @@ func (m *Mesh) PublicMultiAddr() ([]ma.Multiaddr, error) {
 }
 
 func New(keystr string, port int) (*Mesh, error) {
+	return NewWithOptions(keystr, port, false)
+}
+
+func NewWithOptions(keystr string, port int, skipPublic bool) (*Mesh, error) {
 	privateKey, _, err := crypto.GenerateKeyPairWithReader(1, 2048, bytes.NewReader([]byte(keystr)))
 	if err != nil {
 		panic(err)
@@ -119,7 +123,7 @@ func New(keystr string, port int) (*Mesh, error) {
 	}
 
 	pubIp, err := findPublicIpAddr()
-	if err == nil {
+	if err == nil && !skipPublic {
 		pp.Println("@listening_to_public_addrs", pubIp)
 
 		baseAddrs = append(baseAddrs, fmt.Sprintf("/ip4/%s/tcp/%d", pubIp, port))
@@ -128,6 +132,7 @@ func New(keystr string, port int) (*Mesh, error) {
 
 	hps, dh, err := NewHostWithKey(privateKey, port, baseAddrs)
 	if err != nil {
+
 		return nil, err
 	}
 
@@ -139,7 +144,7 @@ func New(keystr string, port int) (*Mesh, error) {
 		Host:                host,
 		DHT:                 dh,
 		Port:                port,
-		PublicIp:            pubIp,
+		PublicIp:            "", //pubIp,
 		ResourceManager:     host.Network().ResourceManager().(*ResourceManager),
 		HolePunchService:    hps,
 		altPeersStore:       make(map[string]*peer.AddrInfo),
